@@ -7,6 +7,7 @@
 ## 正在筹备中的公共服务
 
 * [ ] [公共存储](proposals/2020-03-02-Shared-Storage.md)
+* [ ] [GitHub](inuse/2020-05-25-GitHub-Manual.md)
 * [ ] 软件安装及使用说明
 * [ ] 编程规范
 
