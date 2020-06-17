@@ -12,6 +12,10 @@
 2. 正在准备的论文、代码：**务必**使用个人**私有库**或者组内**私有库**
 3. 其他自己想储存的内容：自行判断私有与共有库利弊选择是否公开
 
-## TODO
+## 常用命令及概念说明
+
+commit branch push pull checkout merge
+
+## Cheat Sheet
 
 * [ ] 一份简单的 git 命令的 cheatsheet
