@@ -14,7 +14,12 @@
 
 ## 常用命令及概念说明
 
-commit branch push pull checkout merge
+* [ ] commit 
+* [ ] branch 
+* [ ] push 
+* [ ] pull 
+* [ ] checkout 
+* [ ] merge
 
 ## Cheat Sheet
 
