@@ -152,8 +152,6 @@ svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
-
-
 .CodeMirror { height: auto; }
 .CodeMirror.cm-s-inner { background: inherit; }
 .CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
@@ -225,8 +223,6 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
 @media print {
   .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
 }
-
-
 /**
  * NexT for Typora
  * Brought to you by Bill Chen || https://github.com/BillChen2K/typora-theme-next
@@ -237,7 +233,6 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
  * - Want to change the font size in exported pdf?
  * - Change the variable `--export-font-size` below.
  **/
-
 :root {
     --base-font-size: 16px;
     --highlight-color: rgb(0, 160, 160);
@@ -247,37 +242,22 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
     --select-text-bg-color: #262a30;
     --select-text-font-color: #eee;
 }
-
 * {
     /* Disable ligatures */
     font-variant-ligatures: none;
 }
-
-
 /* latin-ext */
-
 /* latin */
-
 /* latin-ext */
-
 /* latin */
-
 /* latin-ext */
-
 /* latin */
-
 /* latin-ext */
-
 /* latin */
-
 /* latin-ext */
-
 /* latin */
-
 /* latin-ext */
-
 /* latin */
-
 html,
 body,
 #write {
@@ -290,7 +270,6 @@ body,
     -webkit-text-size-adjust: 100%;
     /* letter-spacing: -0.5px; */
 }
-
 h1,
 h2,
 h3,
@@ -302,110 +281,88 @@ h6 {
     line-height: 1.5;
     margin: 20px 0 15px
 }
-
 .CodeMirror pre {
     font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
     font-size: 0.95em;
     line-height: 1.65em;
 }
-
 #write {
     max-width: 914px;
     text-align: justify;
 }
-
 #write>h1:first-child {
     margin-top: 1.75rem;
 }
-
 #write>h2:first-child {
     margin-top: 1.5rem;
 }
-
 #write>h3:first-child {
     margin-top: 1rem;
 }
-
 #write>h4:first-child {
     margin-top: 0.5rem;
 }
-
 h1 {
     font-size: 2.5em
 }
-
 h2 {
     font-size: 1.75 em
 }
-
 h3 {
     font-size: 1.45em
 }
-
 h4 {
     font-size: 1.25em
 }
-
 h5 {
     font-size: 1.1em
 }
-
 h6 {
     font-size: 1em;
     font-weight: bold
 }
-
 #write code {
     color: var(--highlight-color);
 }
-
 p {
     color: var(--text-color);
     line-height: 1.7rem;
     margin: 0 0 8px;
 }
-
 #write ul {
     line-height: 1.75rem;
     margin-block-start: 0.6em;
     margin-block-end: 0.6em;
 }
-
 #write ol li {
     line-height: 1.75rem;
     margin-block-start: 0.6em;
     margin-block-end: 0.6em;
 }
-
 u {
     text-decoration: none;
     border-bottom: 1px solid #999;
 }
-
 #write>h3.md-focus:before {
     left: -1.875rem;
     top: 0.5rem;
     padding: 2px;
 }
-
 #write>h4.md-focus:before {
     left: -1.875rem;
     top: 0.3125rem;
     padding: 2px;
 }
-
 #write>h5.md-focus:before {
     left: -1.875rem;
     top: 0.25rem;
     padding: 2px;
 }
-
 #write>h6.md-focus:before {
     left: -1.875rem;
     top: .125rem;
     padding: 2px;
 }
-
 @media screen and (max-width: 48em) {
     blockquote {
         margin-left: 1rem;
@@ -437,22 +394,18 @@ u {
         font-size: 1rem;
     } */
 }
-
 a .md-def-url {
     color: #262a30;
 }
-
 a {
     color: var(--highlight-color);
     text-decoration: none;
     font-weight: bold;
     transition-duration: 0.5s;
 }
-
 a:hover {
     text-decoration: underline;
 }
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -460,16 +413,13 @@ table {
     margin: 0 0 20px;
     width: 100%;
 }
-
 table tr:nth-child(2n),
 thead {
     background-color: #f9f9f9;
 }
-
 tbody tr:hover {
     background: #f5f5f5
 }
-
 caption,
 td,
 th {
@@ -478,31 +428,24 @@ th {
     text-align: left;
     vertical-align: middle
 }
-
 table tr th {
     border-bottom: 3px solid #ddd;
     font-weight: 700;
     padding-bottom: 10px;
     background-color: var(--bg-color);
 }
-
 td,
 th {
     border: 1px solid #ddd;
 }
-
 th {
     font-weight: 700;
     padding-bottom: 10px
 }
-
 td {
     border-bottom-width: 1px
 }
-
-
 /* Inline Code */
-
 code,
 .md-fences {
     background: #eee;
@@ -511,13 +454,10 @@ code,
     padding: 2px 4px;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    font-family: 'JetBrains Mono';
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
     font-size: 0.935em;
 }
-
-
 /* Code Blocks */
-
 .md-fences {
     margin: 0 0 20px;
     font-size: 0.9em;
@@ -525,24 +465,19 @@ code,
     padding: 0.4em 1em;
     padding-top: 0.4em;
 }
-
 .task-list {
     padding-left: 0;
 }
-
 .task-list-item {
     padding-left: 2rem;
 }
-
 .task-list-item input {
     top: 3px;
 }
-
 .task-list-item input {
     outline: none;
     margin-bottom: 0.5em;
 }
-
 .task-list-item input::before {
     content: "";
     display: inline-block;
@@ -556,7 +491,6 @@ code,
     margin-right: 0.1rem;
     margin-top: -0.9rem;
 }
-
 .task-list-item input:checked::before {
     padding-left: 0.125em;
     content: '✔';
@@ -565,10 +499,7 @@ code,
     line-height: 0.9375rem;
     margin-top: -0.9rem;
 }
-
-
 /* Chrome 29+ */
-
 @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
     .task-list-item input:before {
         margin-top: -0.2rem;
@@ -578,7 +509,6 @@ code,
         margin-top: -0.2rem;
     }
 }
-
 blockquote {
     border-left: 4px solid #ddd;
     color: #666;
@@ -587,17 +517,13 @@ blockquote {
     margin-top: 10px;
     padding: 0 15px
 }
-
 blockquote p {
     color: #666
 }
-
 blockquote cite::before {
     content: '-';
     padding: 0 5px
 }
-
-
 /* #write pre.md-meta-block {
     min-height: 30px;
     background: #f8f8f8;
@@ -615,9 +541,8 @@ blockquote cite::before {
     margin-bottom: 2em;
     font-size: 0.8em;
     line-height: 1.5em;
-    font-family: 'JetBrains Mono';
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
 } */
-
 #write pre.md-meta-block {
     padding: 1rem;
     font-size: 85%;
@@ -630,168 +555,129 @@ blockquote cite::before {
     margin-bottom: 2em;
     font-size: 0.8em;
     line-height: 1.5em;
-    font-family: 'JetBrains Mono';
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
 }
-
 .MathJax_Display {
     font-size: 0.9em;
     margin-top: 0.5em;
     margin-bottom: 0;
 }
-
 p.mathjax-block,
 .mathjax-block {
     padding-bottom: 0;
 }
-
 .mathjax-block>.code-tooltip {
     bottom: 5px;
     box-shadow: none;
 }
-
 .md-image>.md-meta {
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
-
 .md-image>img {
     margin-top: 2px;
 }
-
 .md-image>.md-meta:first-of-type:before {
     padding-left: 4px;
 }
-
 #typora-source {
     color: #555;
 }
-
-
 /** ui for windows **/
-
 #md-searchpanel {
     border-bottom: 1px solid #ccc;
 }
-
 #md-searchpanel .btn {
     border: 1px solid #ccc;
 }
-
 #md-notification:before {
     top: 14px;
 }
-
 #md-notification {
     background: #eee;
 }
-
 .megamenu-menu-panel .btn {
     border: 1px solid #ccc;
 }
-
 #write>h3.md-focus:before {
     left: -1.5625rem;
     top: .375rem;
 }
-
 #write>h4.md-focus:before {
     left: -1.5625rem;
     top: .285714286rem;
 }
-
 #write>h5.md-focus:before {
     left: -1.5625rem;
     top: .285714286rem;
 }
-
 #write>h6.md-focus:before {
     left: -1.5625rem;
     top: .285714286rem;
 }
-
 .md-image>.md-meta {
     border-radius: 3px;
     padding: 2px 0 0 4px;
     font-size: 0.9em;
     color: inherit;
 }
-
 .md-tag {
     color: inherit;
 }
-
 .md-toc {
     margin-top: 20px;
     padding-bottom: 5px;
 }
-
 .sidebar-tabs {
     border-bottom: none;
 }
-
 .mac-seamless-mode #typora-sidebar {
     background-color: #efefef;
 }
-
 #typora-quick-open {
     border: 1px solid #ddd;
     background-color: #f8f8f8;
 }
-
 #typora-quick-open-item {
     background-color: #FAFAFA;
     border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
     border-style: solid;
     border-width: 1px;
 }
-
 #md-notification:before {
     top: 10px;
 }
-
-
 /** focus mode */
-
 .on-focus-mode blockquote {
     border-left-color: rgba(85, 85, 85, 0.12);
 }
-
 .file-node-content:hover .file-node-icon,
 .file-node-content:hover .file-node-open-state {
     visibility: visible;
 }
-
 .md-lang {
     color: #b4654d;
 }
-
 .html-for-mac .context-menu {
     --item-hover-bg-color: #E6F0FE;
 }
-
 .file-tree-node {
     margin-top: 8px;
     margin-bottom: 8px;
 }
-
 .file-node-title {
     padding-top: 2px;
 }
-
 .outline-item {
     padding-top: 5px;
     padding-bottom: 5px;
     cursor: pointer;
 }
-
-/* 
+/*
 .modal-footer .btn-default,
 .modal-footer .btn-primary {
     border: 2px solid #222;
 }
-
-
-
 #md-searchpanel .btn:not(.close-btn):hover {
     background: #fff;
     border-color: #222;
@@ -799,7 +685,6 @@ p.mathjax-block,
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-
 #md-searchpanel .btn:not(.close-btn) {
     background: #222;
     border-color: #222;
@@ -808,27 +693,21 @@ p.mathjax-block,
     box-shadow: none;
     transition-duration: .2s;
 }
-
 .searchpanel-search-option-btn {
     border-radius: 0px;
     border: 1px solid #222;
 } */
-
 /* Search panel & UI */
-
 #md-searchpanel .btn {
     border: none;
 }
-
 #md-searchpanel input {
     box-shadow: none;
 }
-
 .searchpanel-search-option-btn {
     border-color: #aaa;
     border-radius: 0;
 }
-
 .modal-dialog .btn {
     background: #222;
     border-width: 2px;
@@ -845,42 +724,32 @@ p.mathjax-block,
     transition-duration: .2s;
     transition-timing-function: ease-in-out
 }
-
 .modal-dialog .btn:hover {
     background: #eee;
     border-color: #222;
     color: #222;
 }
-
-
 /* Printing issue */
-
 .typora-export * {
     -webkit-print-color-adjust: exact;
 }
-
 .typora-export p {
     font-size: var(--export-font-size) !important;
 }
-
 .typora-export li {
     font-size: var(--export-font-size);
     line-height: 2rem;
 }
-
 .typora-export #write {
     font-size: var(--export-font-size) !important;
 }
-
 table,
 pre {
     page-break-inside: avoid;
 }
-
 pre {
     word-wrap: break-word;
 }
-
 hr {
     background-image: repeating-linear-gradient(-45deg, #ddd, #ddd 4px, transparent 4px, transparent 8px);
     border: 0;
@@ -893,28 +762,22 @@ hr {
  * - Want code ligatures for JetBrains Mono?
  * - Search for `font-variant-ligatures: none;` and comment that line.
  **/
-
 @import "";
 * {
     /* Disable ligatures */
     font-variant-ligatures: none;
 }
-
-
 /* Helvetica Neue */
-
 html,
 body,
 #write {
     font-family: HelveticaN, "GlowSansSC", "Helvetica Neue", "pingfang sc", "microsoft yahei", sans-serif;
 }
-
 p {
     color: var(--text-color);
     line-height: 1.55rem;
     margin: 0 0 12.5px;
 }
-
 .task-list-item input::before {
     content: "";
     display: inline-block;
@@ -928,7 +791,6 @@ p {
     margin-right: 0.1rem;
     margin-top: -0.9rem;
 }
-
 .task-list-item input:checked::before {
     padding-left: 0.125em;
     content: '✔';
@@ -937,8 +799,6 @@ p {
     line-height: 0.9375rem;
     margin-top: -0.5rem;
 }
-
-
 </style>
 </head>
 <body class='typora-export os-windows' >
@@ -951,3 +811,4 @@ p {
 \end{equation}</script></div></div><p><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.968ex" height="2.671ex" viewBox="0 -835.3 1278 1149.8" role="img" focusable="false" style="vertical-align: -0.73ex;"><defs><path stroke-width="0" id="E486-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path stroke-width="0" id="E486-MJMAIN-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path stroke-width="0" id="E486-MJMAIN-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><a class="mjx-svg-href" xlink:href="#mjx-eqn-eq%3Aeular-sp"><rect width="1278" height="1000" y="-250" fill="none" stroke="none" pointer-events="all"></rect><g class="MathJax_ref"><use xlink:href="#E486-MJMAIN-28"></use><use xlink:href="#E486-MJMAIN-32" x="389" y="0"></use><use xlink:href="#E486-MJMAIN-29" x="889" y="0"></use></g></a></g></svg></span><script type="math/tex">\eqref{eq:eular-sp}</script><span> 也被称作世界上最美的公式之一。整个公式用到了自然数单位 1，虚数单位 </span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.646ex" height="1.824ex" viewBox="0 -731.2 278 785.2" role="img" focusable="false" style="vertical-align: -0.126ex;"><defs><path stroke-width="0" id="E487-MJMAIN-69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E487-MJMAIN-69" x="0" y="0"></use></g></svg></span><script type="math/tex">{\mathrm i}</script><span>，自然对数 </span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.031ex" height="1.461ex" viewBox="0 -522.8 444 629" role="img" focusable="false" style="vertical-align: -0.247ex;"><defs><path stroke-width="0" id="E488-MJMAIN-65" d="M28 218Q28 273 48 318T98 391T163 433T229 448Q282 448 320 430T378 380T406 316T415 245Q415 238 408 231H126V216Q126 68 226 36Q246 30 270 30Q312 30 342 62Q359 79 369 104L379 128Q382 131 395 131H398Q415 131 415 121Q415 117 412 108Q393 53 349 21T250 -11Q155 -11 92 58T28 218ZM333 275Q322 403 238 411H236Q228 411 220 410T195 402T166 381T143 340T127 274V267H333V275Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E488-MJMAIN-65" x="0" y="0"></use></g></svg></span><script type="math/tex">{\mathrm e}</script><span>，圆周率 </span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.331ex" height="1.461ex" viewBox="0 -522.8 573 629" role="img" focusable="false" style="vertical-align: -0.247ex;"><defs><path stroke-width="0" id="E489-MJMATHI-3C0" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E489-MJMATHI-3C0" x="0" y="0"></use></g></svg></span><script type="math/tex">\pi</script><span>，以及有理数 0。这 5 个数字的背后是人类从简单计数逐渐迈入到更高深的数学领域这一求知之路的一个缩影。</span></p><!-- References: --></div>
 </body>
 </html>
+
