@@ -14,7 +14,7 @@ tags:
 所以 [polossk](https://github.com/polossk) 决定使用添加一个路由器连接该打印机, 以实现网络共享, 随即下单购买了某米的路由器.
 
 配置完成后办公室网络拓扑结构如下:
-![](https://raw.githubusercontent.com/lrtfm/Pictures/master/net-printer.png)
+![](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/05/23/net-printer.png)
 
 | 名称   | 型号                       |
 | ------ | -------------------------- |
@@ -53,42 +53,42 @@ tags:
 1. 选择 **添加打印机或扫描仪** 后, Windows 会开始自动搜索, 然后会有类似如下的显示, 
    选择**我需要的打印机不在列表中** (为啥找不到我们要找的打印机呢?).
 
-   ![A](https://raw.githubusercontent.com/lrtfm/Pictures/master/add-printer-A.png)
+   ![A](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/05/23/add-printer-A.png)
 
 2. 下面我们有两种方式, 如图红色部分, 我们选择 **通过手动...**
 
-   ![B](https://raw.githubusercontent.com/lrtfm/Pictures/master/add-printer-B.png)
+   ![B](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/05/23/add-printer-B.png)
 
 3. 然后我们创建新端口, 并选择 **Standard TCP/IP Port**
    
-   ![C](https://raw.githubusercontent.com/lrtfm/Pictures/master/add-printer-C.png)
+   ![C](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/05/23/add-printer-C.png)
 
 4. 填写主机名为路由器的 IP 地址 10.70.148.60. 端口名称默认就可以, 可以不用更改, 
    这个名称并非是填写端口号的, 它只是 Windows 用来标记和某个打印机的通讯方式的. 
 
-   ![D](https://raw.githubusercontent.com/lrtfm/Pictures/master/add-printer-D.png)
+   ![D](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/05/23/add-printer-D.png)
 
    这里也可以勾选 **查询打印机并自动选择要使用的打印机驱动程序.
 
 5. 安装打印机驱动程序, 选择和打印机相应的驱动, 我们的选择如下图.
 
-   ![E](https://raw.githubusercontent.com/lrtfm/Pictures/master/add-printer-E.png)
-   ![F](https://raw.githubusercontent.com/lrtfm/Pictures/master/add-printer-F.png)
+   ![E](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/05/23/add-printer-E.png)
+   ![F](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/05/23/add-printer-F.png)
 
 6. 设置打印机名称 (默认就好)
 
-   ![G](https://raw.githubusercontent.com/lrtfm/Pictures/master/add-printer-G.png)
+   ![G](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/05/23/add-printer-G.png)
 
 7. 设置共享方式, 根据情况, 这里我们不共享.
 
-   ![H](https://raw.githubusercontent.com/lrtfm/Pictures/master/add-printer-H.png)
+   ![H](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/05/23/add-printer-H.png)
 
 8. 完成, 这里可以打印测试页测试.
    
-   ![I](https://raw.githubusercontent.com/lrtfm/Pictures/master/add-printer-I.png)
+   ![I](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/05/23/add-printer-I.png)
 
 9. 之后查看打印机和扫描仪即可看到刚添加的打印机
 
-   ![J](https://raw.githubusercontent.com/lrtfm/Pictures/master/add-printer-J.png)
+   ![J](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/05/23/add-printer-J.png)
 
 到这里设置就完成了.
