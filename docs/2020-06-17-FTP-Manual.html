@@ -1,0 +1,737 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>2020-06-17-FTP-Manual</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+/**
+ * NexT for Typora
+ * Brought to you by Bill Chen || https://github.com/BillChen2K/typora-theme-next
+ *
+ * - Want code ligatures for JetBrains Mono?
+ * - Search for `font-variant-ligatures: none;` and comment that line.
+ *
+ * - Want to change the font size in exported pdf?
+ * - Change the variable `--export-font-size` below.
+ **/
+:root {
+    --base-font-size: 16px;
+    --highlight-color: rgb(0, 160, 160);
+    --text-color: #333;
+    --headings-color: #262a30;
+    --export-font-size: 16px;
+    --select-text-bg-color: #262a30;
+    --select-text-font-color: #eee;
+}
+* {
+    /* Disable ligatures */
+    font-variant-ligatures: none;
+}
+/* latin-ext */
+/* latin */
+/* latin-ext */
+/* latin */
+/* latin-ext */
+/* latin */
+/* latin-ext */
+/* latin */
+/* latin-ext */
+/* latin */
+/* latin-ext */
+/* latin */
+html,
+body,
+#write {
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+    background: #fcfcfc;
+    font-family: Overpass, "GlowSansSC", "Helvetica Neue", "pingfang sc", "microsoft yahei", sans-serif;
+    font-weight: 400;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    /* letter-spacing: -0.5px; */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--headings-color);
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 20px 0 15px
+}
+.CodeMirror pre {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    font-size: 0.95em;
+    line-height: 1.65em;
+}
+#write {
+    max-width: 914px;
+    text-align: justify;
+}
+#write>h1:first-child {
+    margin-top: 1.75rem;
+}
+#write>h2:first-child {
+    margin-top: 1.5rem;
+}
+#write>h3:first-child {
+    margin-top: 1rem;
+}
+#write>h4:first-child {
+    margin-top: 0.5rem;
+}
+h1 {
+    font-size: 2.5em
+}
+h2 {
+    font-size: 1.75 em
+}
+h3 {
+    font-size: 1.45em
+}
+h4 {
+    font-size: 1.25em
+}
+h5 {
+    font-size: 1.1em
+}
+h6 {
+    font-size: 1em;
+    font-weight: bold
+}
+#write code {
+    color: var(--highlight-color);
+}
+p {
+    color: var(--text-color);
+    line-height: 1.7rem;
+    margin: 0 0 8px;
+}
+#write ul {
+    line-height: 1.75rem;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
+}
+#write ol li {
+    line-height: 1.75rem;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
+}
+u {
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+}
+#write>h3.md-focus:before {
+    left: -1.875rem;
+    top: 0.5rem;
+    padding: 2px;
+}
+#write>h4.md-focus:before {
+    left: -1.875rem;
+    top: 0.3125rem;
+    padding: 2px;
+}
+#write>h5.md-focus:before {
+    left: -1.875rem;
+    top: 0.25rem;
+    padding: 2px;
+}
+#write>h6.md-focus:before {
+    left: -1.875rem;
+    top: .125rem;
+    padding: 2px;
+}
+@media screen and (max-width: 48em) {
+    blockquote {
+        margin-left: 1rem;
+        margin-right: 0;
+        padding: 0.5em;
+    }
+    /* .h1,
+    h1 {
+        font-size: 2.827rem;
+    }
+    .h2,
+    h2 {
+        font-size: 1.999rem;
+    }
+    .h3,
+    h3 {
+        font-size: 1.413rem;
+    }
+    .h4,
+    h4 {
+        font-size: 1.250rem;
+    }
+    .h5,
+    h5 {
+        font-size: 1.150rem;
+    }
+    .h6,
+    h6 {
+        font-size: 1rem;
+    } */
+}
+a .md-def-url {
+    color: #262a30;
+}
+a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+a:hover {
+    text-decoration: underline;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em;
+    margin: 0 0 20px;
+    width: 100%;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f9f9f9;
+}
+tbody tr:hover {
+    background: #f5f5f5
+}
+caption,
+td,
+th {
+    font-weight: 400;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle
+}
+table tr th {
+    border-bottom: 3px solid #ddd;
+    font-weight: 700;
+    padding-bottom: 10px;
+    background-color: var(--bg-color);
+}
+td,
+th {
+    border: 1px solid #ddd;
+}
+th {
+    font-weight: 700;
+    padding-bottom: 10px
+}
+td {
+    border-bottom-width: 1px
+}
+/* Inline Code */
+code,
+.md-fences {
+    background: #eee;
+    border-radius: 3px;
+    color: #555;
+    padding: 2px 4px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    font-size: 0.935em;
+}
+/* Code Blocks */
+.md-fences {
+    margin: 0 0 20px;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: 0.4em 1em;
+    padding-top: 0.4em;
+}
+.task-list {
+    padding-left: 0;
+}
+.task-list-item {
+    padding-left: 2rem;
+}
+.task-list-item input {
+    top: 3px;
+}
+.task-list-item input {
+    outline: none;
+    margin-bottom: 0.5em;
+}
+.task-list-item input::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: #fdfdfd;
+    margin-left: -0.1rem;
+    margin-right: 0.1rem;
+    margin-top: -0.9rem;
+}
+.task-list-item input:checked::before {
+    padding-left: 0.125em;
+    content: '✔';
+    /*◘*/
+    font-size: 0.8125rem;
+    line-height: 0.9375rem;
+    margin-top: -0.9rem;
+}
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    .task-list-item input:before {
+        margin-top: -0.2rem;
+    }
+    .task-list-item input:checked:before,
+    .task-list-item input[checked]:before {
+        margin-top: -0.2rem;
+    }
+}
+blockquote {
+    border-left: 4px solid #ddd;
+    color: #666;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 15px
+}
+blockquote p {
+    color: #666
+}
+blockquote cite::before {
+    content: '-';
+    padding: 0 5px
+}
+/* #write pre.md-meta-block {
+    min-height: 30px;
+    background: #f8f8f8;
+    padding: 1.5em;
+    font-weight: 300;
+    font-size: 1em;
+    padding-bottom: 1.5em;
+    padding-top: 3em;
+    margin-top: -1.5em;
+    color: #999;
+    border-left: 1000px #f8f8f8 solid;
+    margin-left: -1000px;
+    border-right: 1000px #f8f8f8 solid;
+    margin-right: -1000px;
+    margin-bottom: 2em;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+} */
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f1f1f1;
+    border: 0;
+    border-radius: 3px;
+    color: hsl(0, 0%, 53%);
+    margin-top: 0 !important;
+    margin-bottom: 2em;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+}
+.MathJax_Display {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+p.mathjax-block,
+.mathjax-block {
+    padding-bottom: 0;
+}
+.mathjax-block>.code-tooltip {
+    bottom: 5px;
+    box-shadow: none;
+}
+.md-image>.md-meta {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.md-image>img {
+    margin-top: 2px;
+}
+.md-image>.md-meta:first-of-type:before {
+    padding-left: 4px;
+}
+#typora-source {
+    color: #555;
+}
+/** ui for windows **/
+#md-searchpanel {
+    border-bottom: 1px solid #ccc;
+}
+#md-searchpanel .btn {
+    border: 1px solid #ccc;
+}
+#md-notification:before {
+    top: 14px;
+}
+#md-notification {
+    background: #eee;
+}
+.megamenu-menu-panel .btn {
+    border: 1px solid #ccc;
+}
+#write>h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+#write>h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+#write>h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+#write>h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+.md-image>.md-meta {
+    border-radius: 3px;
+    padding: 2px 0 0 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+.md-tag {
+    color: inherit;
+}
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+.sidebar-tabs {
+    border-bottom: none;
+}
+.mac-seamless-mode #typora-sidebar {
+    background-color: #efefef;
+}
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+#md-notification:before {
+    top: 10px;
+}
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+.md-lang {
+    color: #b4654d;
+}
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+.file-tree-node {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.file-node-title {
+    padding-top: 2px;
+}
+.outline-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+/*
+.modal-footer .btn-default,
+.modal-footer .btn-primary {
+    border: 2px solid #222;
+}
+#md-searchpanel .btn:not(.close-btn):hover {
+    background: #fff;
+    border-color: #222;
+    color: #222;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#md-searchpanel .btn:not(.close-btn) {
+    background: #222;
+    border-color: #222;
+    color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition-duration: .2s;
+}
+.searchpanel-search-option-btn {
+    border-radius: 0px;
+    border: 1px solid #222;
+} */
+/* Search panel & UI */
+#md-searchpanel .btn {
+    border: none;
+}
+#md-searchpanel input {
+    box-shadow: none;
+}
+.searchpanel-search-option-btn {
+    border-color: #aaa;
+    border-radius: 0;
+}
+.modal-dialog .btn {
+    background: #222;
+    border-width: 2px;
+    border-color: #222;
+    border-radius: 0;
+    color: #fff;
+    display: inline-block;
+    font-size: .875em;
+    line-height: 2rem;
+    padding: 0 20px;
+    margin: 5px;
+    text-decoration: none;
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out
+}
+.modal-dialog .btn:hover {
+    background: #eee;
+    border-color: #222;
+    color: #222;
+}
+/* Printing issue */
+.typora-export * {
+    -webkit-print-color-adjust: exact;
+}
+.typora-export p {
+    font-size: var(--export-font-size) !important;
+}
+.typora-export li {
+    font-size: var(--export-font-size);
+    line-height: 2rem;
+}
+.typora-export #write {
+    font-size: var(--export-font-size) !important;
+}
+table,
+pre {
+    page-break-inside: avoid;
+}
+pre {
+    word-wrap: break-word;
+}
+hr {
+    background-image: repeating-linear-gradient(-45deg, #ddd, #ddd 4px, transparent 4px, transparent 8px);
+    border: 0;
+    height: 3px;
+    margin: 40px 0
+}/**
+ * NexT for Typora
+ * Brought to you by Bill Chen || https://github.com/BillChen2K/typora-theme-next
+ *
+ * - Want code ligatures for JetBrains Mono?
+ * - Search for `font-variant-ligatures: none;` and comment that line.
+ **/
+@import "";
+* {
+    /* Disable ligatures */
+    font-variant-ligatures: none;
+}
+/* Helvetica Neue */
+html,
+body,
+#write {
+    font-family: HelveticaN, "GlowSansSC", "Helvetica Neue", "pingfang sc", "microsoft yahei", sans-serif;
+}
+p {
+    color: var(--text-color);
+    line-height: 1.55rem;
+    margin: 0 0 12.5px;
+}
+.task-list-item input::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: #fdfdfd;
+    margin-left: -0.1rem;
+    margin-right: 0.1rem;
+    margin-top: -0.9rem;
+}
+.task-list-item input:checked::before {
+    padding-left: 0.125em;
+    content: '✔';
+    /*◘*/
+    font-size: 0.8125rem;
+    line-height: 0.9375rem;
+    margin-top: -0.5rem;
+}
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="ftp-相关" class="md-header-anchor"></a><span>FTP 相关</span></h1><h2><a name="基本操作" class="md-header-anchor"></a><span>基本操作</span></h2><h3><a name="获取相关软件" class="md-header-anchor"></a><span>获取相关软件</span></h3><p><span>所使用的软件是 FileZilla（客户端和服务端）为免费软件，可以访问其官网 </span><a href='https://filezilla-project.org/' target='_blank' class='url'>https://filezilla-project.org/</a><span>，中文官网 </span><a href='https://www.filezilla.cn/' target='_blank' class='url'>https://www.filezilla.cn/</a><span>。从中获取对应的服务端软件（如图所示给出的详细文件信息）和客户端软件。</span></p><p><strong><span>注意</span></strong><span>：FileZilla 服务端仅仅支持 Windows 平台。</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-01.png" referrerpolicy="no-referrer" alt="img01"></p><h3><a name="安装-filezilla-server" class="md-header-anchor"></a><span>安装 FileZilla Server</span></h3><p><strong><span>注意</span></strong><span>：所有安装按默认操作即可，建议不要修改其中的参数；软件安装以及配置过程，中文版和英文版基本一样。</span></p><ol start='' ><li><p><span>引导界面</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-02.png" referrerpolicy="no-referrer" alt="img02"></p></li><li><p><span>选择安装内容界面</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-03.png" referrerpolicy="no-referrer" alt="img03"></p></li><li><p><span>修改安装路径界面</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-04.png" referrerpolicy="no-referrer" alt="img04"></p></li><li><p><span>服务启动配置界面</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-05.png" referrerpolicy="no-referrer" alt="img05"></p></li><li><p><span>安装完成，首次启动界面</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-06.png" referrerpolicy="no-referrer" alt="imag6"></p></li><li><p><span>设置密码（其他信息建议不要改动），勾选总是访问这个服务，点击连接（Connect），顺利启动 FTP 服务。（若有警告，参考被动模式设置，完成该项设置就无警告了）。</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-07.png" referrerpolicy="no-referrer" alt="img07"></p></li></ol><h2><a name="服务端配置" class="md-header-anchor"></a><span>服务端配置</span></h2><blockquote><p><span>以下是在 Windows 10 平台上配置 FileZilla Server 的步骤</span></p></blockquote><h3><a name="用户组设置" class="md-header-anchor"></a><span>用户组设置</span></h3><p><strong><span>注意</span></strong><span>：通过用户组设置权限可以很好的管理用户，在新建用户时选择对应的用户组，就不需要对每个用户进行设置，减少工作量。</span></p><ol start='' ><li><p><span>点击主界面的 </span><code>Edit</code><span>（编辑）选择 </span><code>Groups</code><span>（用户组）按钮</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-08.png" referrerpolicy="no-referrer" alt="img08"></p></li><li><p><span>选择 </span><code>General</code><span>（通用）按钮，选择右边的 </span><code>Add</code><span>（添加）按钮，输入用户组名称 </span><code>test</code><span>，其余设置默认</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-09.png" referrerpolicy="no-referrer" alt="img09"></p></li><li><p><span>选择 </span><code>Shared folders</code><span>（文件路径），点击左边的 </span><code>Add</code><span>，添加用户组对应的文件夹路径，默认第一次添加的路径为 FTP 用户访问时的主目录，根据需求选择中间的权限设置（权限含义参考其他相关内容小结）</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-10.png" referrerpolicy="no-referrer" alt="img10"></p></li><li><p><span>点击 </span><code>OK</code><span> 完成用户组配置</span></p></li></ol><h3><a name="用户添加" class="md-header-anchor"></a><span>用户添加</span></h3><ol start='' ><li><p><span>点击主界面的设置按钮，选择 </span><code>Users</code><span>（用户）按钮（这一步与与用户组第一步操作类似）</span></p></li><li><p><span>选择 </span><code>General</code><span>（通用）按钮，选择右边的 </span><code>Add</code><span>（添加）按钮，输入用户名称 </span><code>test</code><span>，选择设置好的用户组，添加密码，其余设置默认</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-11.png" referrerpolicy="no-referrer" alt="img11"></p></li><li><p><span>选择 </span><code>Shared folders</code><span>（文件路径），可以点击左边的 </span><code>Add</code><span>，添加用户可以访问文件夹路径，根据需求选择中间的权限设置。若此处不添加任何路径，就以对应用户组的路径为默认路径。</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-12.png" referrerpolicy="no-referrer" alt="img12"></p></li><li><p><span>点击 </span><code>OK</code><span> 完成用户配置</span></p></li></ol><h3><a name="安全证书配置" class="md-header-anchor"></a><span>安全证书配置</span></h3><ol start='' ><li><p><span>点击 </span><code>Edit</code><span>（编辑），选择设置，进入设置界面</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-13.png" referrerpolicy="no-referrer" alt="img13"></p></li><li><p><span>选择 </span><code>FTP over TLS settings</code></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-14.png" referrerpolicy="no-referrer" alt="img14"></p></li><li><p><span>选择界面中的 </span><code>Generate new certificate</code><span> 按钮，得到如下界面</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-15.png" referrerpolicy="no-referrer" alt="img15"></p></li><li><p><span>可以根据情况填写相关信息（如果有相应的证书信息，</span><code>Country code</code><span> 必填），然后选择证书保存路径，没有就直接点击 </span><code>Generate certificate</code><span> 按钮，在点击确定，完成证书生成。</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-16.png" referrerpolicy="no-referrer" alt="img16"></p></li><li><p><span>再点击 </span><code>OK</code><span> 完成安全证书配置。</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-17.png" referrerpolicy="no-referrer" alt="img17"></p></li></ol><h3><a name="防火墙设置" class="md-header-anchor"></a><span>防火墙设置</span></h3><ol start='' ><li><p><span>在 Windows 搜索工具中搜索防火墙设置</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-18.png" referrerpolicy="no-referrer" alt="img18"></p></li><li><p><span>点击允许应用通过防火墙，从列表中选择 FileZilla 相关的项目</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-19.png" referrerpolicy="no-referrer" alt="img19"></p></li><li><p><span>如果没有找到，先选择</span><code>更改设置</code><span>，再选择</span><code>允许其他应用</code><span>，选择安装软件的路径，点击</span><code>添加</code><span>按钮</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-20.png" referrerpolicy="no-referrer" alt="img20"></p></li><li><p><span>添加完成后，将对应的专用和公用都勾上，点击</span><code>确定</code><span>，完成防火墙配置。</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-21.png" referrerpolicy="no-referrer" alt="img21"></p></li></ol><h3><a name="其他相关内容" class="md-header-anchor"></a><span>其他相关内容</span></h3><h4><a name="被动模式设置" class="md-header-anchor"></a><span>被动模式设置</span></h4><ol start='' ><li><p><span>选择设置栏中的 </span><code>passive mode settings</code></p></li><li><p><span>勾选 </span><code>use the following IP</code><span>，在输入框中填写本机 IP 地址（查阅本机 IP 地址，可以在 </span><code>cmd</code><span> 中输入 </span><code>ipconfig</code><span> 可以查看），点击 </span><code>OK</code><span>，完成配置。</span></p><p><img src="https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/17/FTP-Manual-22.png" referrerpolicy="no-referrer" alt="img22"></p></li></ol><h4><a name="关于用户组合用户中权限设置含义" class="md-header-anchor"></a><span>关于用户组合用户中权限设置含义</span></h4><ol start='' ><li><span>文件</span></li></ol><figure><table><thead><tr><th><span>关键字</span></th><th><span>表现效果</span></th></tr></thead><tbody><tr><td><span>Read</span></td><td><span>可下载文档</span></td></tr><tr><td><span>Write</span></td><td><span>可上传文档</span></td></tr><tr><td><span>Delete</span></td><td><span>可删除文档</span></td></tr><tr><td><span>Append</span></td><td><span>即把文件下载到本地副本并打开编辑，在关闭时再上传到服务器</span></td></tr></tbody></table></figure><ol start='2' ><li><span>文件夹</span></li></ol><figure><table><thead><tr><th><span>关键字</span></th><th><span>表现效果</span></th></tr></thead><tbody><tr><td><span>Create</span></td><td><span>可新增子文件夹</span></td></tr><tr><td><span>Delete</span></td><td><span>可删除子文件夹</span></td></tr><tr><td><span>List</span></td><td><span>可列出文件夹中的文档</span></td></tr><tr><td><span>+Subdirs</span></td><td><span>列出文件夹中的子文件夹</span></td></tr></tbody></table></figure><h2><a name="其他注意事项" class="md-header-anchor"></a><span>其他注意事项</span></h2><ol start='' ><li><span>需要合理设置普通用户权限，管理员权限，防止文件误删。</span></li><li><span>需要给用户强调上传文件是一定要弄清楚，一旦上传不可修改。</span></li><li><span>需要给使用者除密码和用户名外，还需要提供IP地址。</span></li><li><span>在不需要使用时，将客户端关闭，减少宽带占用。</span></li><li><span>需要强调错开高峰上传文件，分批传文件。</span></li></ol><h2><a name="扩展" class="md-header-anchor"></a><span>扩展</span></h2><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' disabled='disabled' /><p><span>以上给出的 FTP 服务是搭建在 Windows 平台上的，将来若需要迁移到 Linux 平台上，可以考虑使用 </span><code>vsftpd</code><span>。</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' disabled='disabled' /><p><span>在 FTP 服务上有经验分享内容，可以使用 Hugo 在 Windows 上搭建博客系统，方便查阅信息。</span></p></li></ul><h2><a name="参考资料" class="md-header-anchor"></a><span>参考资料</span></h2><ol start='' ><li><a href='https://www.jb51.net/article/122172.htm'><span>FTP 服务器 FileZilla Server 详细配置教程</span></a></li></ol></div>
+</body>
+</html>
+
