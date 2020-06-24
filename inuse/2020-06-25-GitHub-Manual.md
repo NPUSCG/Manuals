@@ -23,9 +23,12 @@
 #### 1.2 使用说明
 ##### 1.2.1 GitHub Desktop
 在GitHub Desktop中依次选择菜单`File\New repository`，也可以使用快捷键`Ctrl+N`。如下图：
-![img01](../images/2020-6-25-GitHub-Manual-01.png)
+
+![img01](../images/2020-06-25-GitHub-Manual-01.png)
+
 点击`New repository`后，会弹出如下图所示的窗口。
-![img02](../images/2020-6-25-GitHub-Manual-02.png)
+
+![img02](../images/2020-06-25-GitHub-Manual-02.png)
 
 1. 新创建的仓库的名称；
 2. 对新创建仓库的简要描述。在 GitHub 网页上，该描述会显示在仓库名的下方；
@@ -36,7 +39,9 @@
 
 点击`Create repository`。如果看到了`Publish repository`按钮亮起，如下图所示，说明本地仓库创建成功。
 
-![img03](../images/2020-6-25-GitHub-Manual-03.png)
+![img03](../images/2020-06-25-GitHub-Manual-03.png)
+
+
 
 ##### 1.2.2 Git Bash
 
