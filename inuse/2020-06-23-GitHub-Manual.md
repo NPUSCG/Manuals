@@ -21,7 +21,7 @@
 `git init`用于在当前目录中创建一个新的本地仓库。
 
 #### 1.2 使用说明
-##### 1.2.1 GitHub Desktop
+#### 1.2.1 GitHub Desktop
 在GitHub Desktop中依次选择菜单`File\New repository`，也可以使用快捷键`Ctrl+N`。如下图：
 
 ![img01](../images/2020-06-25-GitHub-Manual-01.png)
@@ -43,7 +43,7 @@
 
 
 
-##### 1.2.2 Git Bash
+#### 1.2.2 Git Bash
 
 > 下面的`bash`代码中，`$`之后的是命令部分，`$`本身不是命令中的内容；没有特殊符号开头的行是上一条命令的执行结果；`#`开头的行是注释。下同。
 
@@ -74,7 +74,7 @@ $ ls -a
 
 #### 2.2 使用说明
 
-##### 2.2.1 GitHub Desktop
+#### 2.2.1 GitHub Desktop
 
 在GitHub Desktop中依次选择菜单`File\Clone repository`，也可以使用快捷键`Ctrl+Shift+O`。如下图：
 
@@ -84,9 +84,9 @@ $ ls -a
 
 ![img05](../images/2020-06-25-GitHub-Manual-05.png)
 
-在`GitHub.com`一栏中，可以找到自己账户中的库并克隆到本地。如果是给定 url 的库，需要按上图所示，将仓库的 url 拷贝到图中数字 1 对应的文本框，在文本框 2 中选择仓库在本地的目录。完成后点击`Clone`按钮即可。
+在`GitHub.com`一栏中，可以找到自己账户中的库并克隆到本地。如果是给定 url 的库，需要按上图所示，将仓库的 url 拷贝到文本框 1，在文本框 2 中选择仓库在本地的目录。完成后点击`Clone`按钮即可。
 
-##### 2.2 Git Bash
+#### 2.2 Git Bash
 
 执行命令
 
