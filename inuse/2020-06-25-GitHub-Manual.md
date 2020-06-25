@@ -66,6 +66,8 @@ $ ls -a
 
 说明本地 Git 仓库创建成功。
 
+
+
 ### 2.  `git clone`
 
 #### 2.1 命令说明
@@ -114,6 +116,8 @@ $ git clone https://github.com/YourName/TestRepo.git TestRepoRename
 ```
 
 上述命令将`TestRepo`仓库克隆到当前目录下名为`TestRepoRename`的目录中。
+
+
 
 ### 3. `git commit`
 
@@ -167,6 +171,8 @@ $ git commit -am "Add a new file."
 [master 89c1b4b] Add a new file.
  1 file changed, 1 insertion(+)
 ```
+
+
 
 ### 4.  `git branch`
 
@@ -229,6 +235,8 @@ $ git branch
 
 可以看到刚刚创建的分支`TestBranch2`已被删除。
 
+
+
 ### 5. `git push`
 
 #### 5.1 命令说明
@@ -271,6 +279,8 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/YourName/TestRepo.git
    89c1b4b..239d838  master -> TestBranch1
 ```
+
+
 
 ### 6. `git pull`
 
