@@ -1,4 +1,4 @@
-# GitHub 相关
+GitHub 相关
 
 ## 入门手册
 
@@ -321,7 +321,38 @@ Already up to date.
 
 
 
+### 7. `git checkout`
 
+#### 7.1 命令说明
+
+`git checkout`用于切换分支。
+
+#### 7.2 使用说明
+
+#### 7.2.1 GitHub Desktop
+
+在`Current branch`栏中直接选择分支即可。如下图：
+
+![img12](../images/2020-06-25-GitHub-Manual-12.png)
+
+#### 7.2.2 Git Bash
+
+切换分支指令的形式为`git checkout branchname`。例如切换到`TestRepo`仓库的`TestBranch1`分支：
+
+```bash
+# git checkout example
+$ git branch
+  TestBranch1
+* master
+$ git checkout TestBranch1
+Switched to branch 'TestBranch1'
+Your branch is up to date with 'origin/TestBranch1'.
+$ git branch
+* TestBranch1
+  master
+```
+
+执行完`git checkout`后分支成功切换到`TestBranch1`。
 
 
 
