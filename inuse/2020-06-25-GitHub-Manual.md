@@ -168,7 +168,7 @@ $ git commit -am "Add a new file."
  1 file changed, 1 insertion(+)
 ```
 
-### 4. `git branch`
+### 4.  `git branch`
 
 #### 4.1 命令说明
 
@@ -229,6 +229,51 @@ $ git branch
 
 可以看到刚刚创建的分支`TestBranch2`已被删除。
 
+### 5. `git push`
+
+#### 5.1 命令说明
+
+之前的 4 个命令都是操作本地版本库。在本地版本库修改完成后，使用`git push`命令将本地分支推送到远程服务器上对应的分支。
+
+#### 5.2 使用说明
+
+#### 5.2.1 GitHub Desktop
+
+执行`commit`命令提交后，点击`Push origin`即可，提交的内容会同步到`Current branch`中选择的分支里。
+
+![img10](../images/2020-06-25-GitHub-Manual-10.png)
+
+#### 5.2.2 Git Bash
+
+`git push`命令的一般形式为`git push <远程主机名> <本地分支名>:<远程分支名>`，其中`<>`内的内容均可以省略：
+
+1. 如果省略远程分支名，则表示将本地分支推送到远程存在追踪关系（通常是两者同名）的分支，如果该远程分支不存在，则会被新建。例如：`git push origin master`；
+2. 如果省略本地分支名，则表示删除指定的远程分支（因为推送一个空的本地分支到远程分支），等同于`git push origin -delete BranchName`。例如：`git push origin :TestBranch1`；
+3. 如果当前分支与远程分支存在追踪关系，则本地分支和远程分支都可以省略，将当前分支推送到`origin`主机对应的分支。例如：`git push origin`；
+4. 如果当前分支只有一个远程分支，那主机名也可以省略，只需要`git push`即可。
+
+例如，将修改后的`file1.txt`推送到`TestRepo`仓库的`TestBranch1`分支，需要执行的命令为：
+
+```bash
+# git push example
+$ git add .
+$ git commit -m "Add new line in file1.txt"
+[master 239d838] Add new line in file1.txt
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+$ git push origin master:TestBranch1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 322 bytes | 322.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/YourName/TestRepo.git
+   89c1b4b..239d838  master -> TestBranch1
+```
+
+
+
 
 
 # TODO:
@@ -237,7 +282,7 @@ $ git branch
 * [x] clone
 * [x] commit
 * [x] branch
-* [ ] push 
+* [x] push 
 * [ ] pull 
 * [ ] checkout 
 * [ ] merge
