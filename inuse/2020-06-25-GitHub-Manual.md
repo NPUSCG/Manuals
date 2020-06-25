@@ -121,7 +121,7 @@ $ git clone https://github.com/YourName/TestRepo.git TestRepoRename
 
 `git commit`命令将暂存区里的内容提交到本地仓库中。每次使用`git commit`命令时会生成一个唯一的`commit-id`，在任何时候可以通过这个 id 回退到对应 commit 之前的仓库内容。
 
-### 3.2 使用说明
+#### 3.2 使用说明
 
 #### 3.2.1 GitHub Desktop
 
@@ -168,6 +168,67 @@ $ git commit -am "Add a new file."
  1 file changed, 1 insertion(+)
 ```
 
+### 4. `git branch`
+
+#### 4.1 命令说明
+
+Git 的分支允许开发者从开发主线上分离，在不影响主线内容的同时继续进行代码管理。`git branch`命令用于列出分支、创建分支和删除分支。
+
+#### 4.2 使用说明
+
+#### 4.2.1 GitHub Desktop
+
+在`Current branch`栏中点击`New branch`，输入新 branch 名称即可创建。如下图：
+
+![img07](../images/2020-06-25-GitHub-Manual-07.png)
+
+![img08](../images/2020-06-25-GitHub-Manual-08.png)
+
+创建新分支后，在`Current branch`栏中可以看到新创建的分支。如果要删除当前分支，在最上方菜单栏中选择`Branch\Delete`，或使用快捷键`Ctrl+Shift+D`，如下图：
+
+![img09](../images/2020-06-25-GitHub-Manual-09.png)
+
+点击后会弹出确认框，点击确定后即可删除当前所在分支。
+
+#### 4.2.2 Git Bash
+
+`git branch`命令会列出在本地的分支。比如对`TestRepo`仓库，有：
+
+```bash
+# git branch example
+$ git branch
+  TestBranch1
+* master
+```
+
+`*`号标记的表示当前所在的分支。
+
+如果要创建一个新的分支，例如`TestBranch2`，在`git branch`命令后添加新分支名即可。例如：
+
+```bash
+# git branch example
+$ git branch TestBranch2
+$ git branch
+  TestBranch1
+  TestBranch2
+* master
+```
+
+可以看到新分支已经创建。
+
+如果要删除分支，使用`-d`命令。例如删除`TestBranch2`分支：
+
+```bash
+# git branch example
+$ git branch -d TestBranch2
+Deleted branch TestBranch2 (was 89c1b4b).
+$ git branch
+  TestBranch1
+* master
+```
+
+可以看到刚刚创建的分支`TestBranch2`已被删除。
+
 
 
 # TODO:
@@ -175,7 +236,7 @@ $ git commit -am "Add a new file."
 * [x] init
 * [x] clone
 * [x] commit
-* [ ] branch
+* [x] branch
 * [ ] push 
 * [ ] pull 
 * [ ] checkout 
