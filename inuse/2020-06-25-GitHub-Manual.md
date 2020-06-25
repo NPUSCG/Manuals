@@ -356,6 +356,48 @@ $ git branch
 
 
 
+### 8. `git merge`
+
+#### 8.1 命令说明
+
+`git merge`命令用于将多个分支合并为一个分支。
+
+> 注意：如果分支出现冲突，比如在两个分支内对同一个文件进行了不同修改，需要先处理冲突后再进行合并。解决冲突的方法可以参考[这篇文章](https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344)。
+
+#### 8.2 使用说明
+
+假设即将合并的分支中所有的冲突都已经解决。
+
+#### 8.2.1 GitHub Desktop
+
+在`Current branch`栏底部点击`Choose a branch to merge into ...`（`...`处是当前分支名），会弹出下图所示的窗口：
+
+![img13](../images/2020-06-25-GitHub-Manual-13.png)
+
+以合并分支`TestBranch1`到分支`master`为例，在列表中选中`TestBranch1`，之后点击`Merge TestBranch1 into Master`即可。
+
+#### 8.2.2 Git Bash
+
+`git merge`命令将指定的分支合并到当前分支。以合并分支`TestBranch1`到分支`master`为例：
+
+```bash
+# git merge example
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+$ git merge TestBranch1
+hint: Waiting for your editor to close the file...
+[main 2020-06-25T16:30:19.107Z] update#setState idle
+Merge made by the 'recursive' strategy.
+ file2.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+```
+
+使用`-h`选项可以查看`git merge`命令的帮助。
+
+
+
 # TODO:
 
 * [x] init
@@ -364,6 +406,6 @@ $ git branch
 * [x] branch
 * [x] push 
 * [x] pull 
-* [ ] checkout 
-* [ ] merge
+* [x] checkout 
+* [x] merge
 * [ ] 一份简单的 git 命令的 cheatsheet
