@@ -41,7 +41,7 @@ GitHub 相关
 
 ![img03](../images/2020-06-25-GitHub-Manual-03.png)
 
-
+如果要将刚创建的本地仓库提交到远程，点击`Publish repository`即可。
 
 #### 1.2.2 Git Bash
 
@@ -64,7 +64,7 @@ $ ls -a
 . .. .git
 ```
 
-说明本地 Git 仓库创建成功。
+说明本地 Git 仓库创建成功。如果要将刚创建的本地仓库提交到远程，需要执行`git remote add origin [url]`命令（`[url]`是远程项目地址），并执行后续的提交和推送操作。
 
 
 
@@ -256,7 +256,7 @@ $ git branch
 `git push`命令的一般形式为`git push <远程主机名> <本地分支名>:<远程分支名>`，其中`<>`内的内容均可以省略：
 
 1. 如果省略远程分支名，则表示将本地分支推送到远程存在追踪关系（通常是两者同名）的分支，如果该远程分支不存在，则会被新建。例如：`git push origin master`；
-2. 如果省略本地分支名，则表示删除指定的远程分支（因为推送一个空的本地分支到远程分支），等同于`git push origin -delete BranchName`。例如：`git push origin :TestBranch1`；
+2. 如果省略本地分支名，则表示删除指定的远程分支（因为推送一个空的本地分支到远程分支），等同于`git push origin --delete BranchName`。例如：`git push origin :TestBranch1`；
 3. 如果当前分支与远程分支存在追踪关系，则本地分支和远程分支都可以省略，将当前分支推送到`origin`主机对应的分支。例如：`git push origin`；
 4. 如果当前分支只有一个远程分支，那主机名也可以省略，只需要`git push`即可。
 
@@ -398,6 +398,186 @@ Merge made by the 'recursive' strategy.
 
 
 
+# Git常用命令清单
+
+该常见命令清单参考了[这篇文章](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)。
+
+### 1. 新建代码库
+
+```bash
+# 在当前目录下新建一个Git仓库
+$ git init
+
+# 新建一个目录并初始化为Git仓库
+$ git init [project-name]
+
+# 从指定url克隆一个Git仓库
+$ git clone [given-url]
+```
+
+### 2. 配置
+
+```bash
+# 设置当前仓库提交代码时的用户信息
+$ git config user.name "YourName"
+$ git config user.email your@email.com
+
+# 设置全局的提交时用户信息
+$ git config --global user.name "YourName"
+$ git config --global user.email your@email.com
+
+# 显示当前的Git配置
+$ git config --list
+```
+
+### 3. 增删文件
+
+```bash
+# 添加指定文件到暂存区
+$ git add [filename1] [filename2] ...
+
+# 添加当前目录所有文件到暂存区
+$ git add .
+
+# 添加指定目录（包括子目录）到暂存区
+$ git add [dir]
+
+# 删除工作区指定文件，并且将这次删除放入暂存区
+$ git rm [filename1] [filename2] ...
+
+# 改名指定文件，并且将这次改名放入暂存区
+$ git mv [oldfilename] [newfilename]
+```
+
+### 4. 代码提交
+
+```bash
+# 将暂存区提交到仓库
+$ git commit -m "Summary"
+
+# 将指定文件由暂存区提交到仓库
+$ git commit [filename1] [filename2] ... -m "Summary"
+
+# 将上次提交后工作区的变化提交到仓库
+$ git commit -a
+
+# 使用一次新的提交替代上一次提交
+# 指定文件的新变化将被重做
+# 如果没有任何文件变化，则只改写上一次提交的提交信息
+$ git commit --amend [filename1] [filename2] ... -m "New Summary"
+```
+
+### 5. 分支处理
+
+```bash
+# 列出所有本地分支
+$ git branch
+
+# 列出所有远程分支
+$ git branch -r
+
+# 列出所有本地分支和远程分支
+$ git branch -a
+
+# 新建一个分支，但停留在当前分支
+$ git branch [branch]
+
+# 新建一个分支，并切换到该分支
+$ git checkout -b [branch]
+
+# 新建一个分支，并与指定远程分支建立追踪关系
+$ git branch --track [branch] [remote-branch]
+
+# 切换到指定分支，并更新工作区
+$ git checkout [branch]
+
+# 合并指定分支到当前分支
+$ git merge [branch]
+
+# 删除分支
+$ git branch -d [branch]
+
+# 删除远程分支
+$ git push origin --delete [branch-name]
+$ git push origin :[branch-name]
+$ git branch -dr [remote/branch]
+```
+
+### 6. 远程同步
+
+```bash
+# 显示所有远程仓库
+$ git remote -v
+
+# 显示指定远程仓库
+$ git remote show [remote]
+
+# 上传本地指定分支到远程仓库
+$ git pull [remote] [branch]
+
+# 无视冲突，强行上传当前本地分支到远程仓库
+$ git push [remote] --force
+
+# 下载远程仓库的所有变动
+$ git fetch [remote]
+
+# 下载远程仓库的变动，并与本地分支合并
+$ git pull [remote] [branch]
+```
+
+### 7. 查看信息
+
+```bash
+# 显示有变更的文件
+$ git status
+
+# 显示当前分支的版本历史
+$ git log
+
+# 显示提交历史，以及每次提交变更的文件
+$ git log --stat
+
+# 显示暂存区与工作区的差异
+$ git diff
+
+# 显示暂存区和上一次提交的差异
+$ git diff --cached [file]
+
+# 显示两次提交之间的差异
+$ git diff [first-branch]...[second-branch]
+```
+
+### 8. 撤销
+
+```bash
+# 恢复暂存区的指定文件到工作区
+$ git checkout [file]
+
+# 恢复某个提交的指定文件到暂存区和工作区
+$ git checkout [commit] [file]
+
+# 恢复暂存区的所有文件到工作区
+$ git checkout .
+
+# 重置暂存区指定文件，与上一次提交保持一致，但工作区不变
+$ git reset [file]
+
+# 重置暂存区与工作区，与上一次提交保持一致
+$ git reset --hard
+
+# 新建一个提交，用来撤销指定的提交。被指定提交的所有变化将被新建的提交抵消，并且应用到当前分支
+$ git revert [commit]
+```
+
+### 9. 发布
+
+```bash
+# 生成一个可供发布的压缩包
+$ git archive
+```
+
+
+
 # TODO:
 
 * [x] init
@@ -408,4 +588,4 @@ Merge made by the 'recursive' strategy.
 * [x] pull 
 * [x] checkout 
 * [x] merge
-* [ ] 一份简单的 git 命令的 cheatsheet
+* [x] 一份简单的 git 命令的 cheatsheet
