@@ -272,6 +272,45 @@ To https://github.com/YourName/TestRepo.git
    89c1b4b..239d838  master -> TestBranch1
 ```
 
+### 6. `git pull`
+
+#### 6.1 命令说明
+
+`git pull`命令用于将远程分支拉取到指定本地分支。
+
+#### 6.2 使用说明
+
+#### 6.2.1 GitHub Desktop
+
+远程仓库修改后，红框对应的位置会出现`Pull origin`，点击该按钮即可将远程仓库的内容同步到`Current branch`中选择的分支里。
+
+![img11](../images/2020-06-25-GitHub-Manual-11.png)
+
+#### 6.2.2 Git Bash
+
+`git pull`命令的一般形式为`git pull <远程主机名> <远程分支名>:<本地分支名>`，其中`<>`中的内容可以省略：
+
+1. 如果远程分支是与当前分支合并，则本地分支名可以省略。例如：`git pull origin master`；
+2. 如果当前分支与远程分支存在追踪关系，则远程分支名也可以省略。例如：`git pull origin`；
+3. 如果当前分支只有一个追踪分支，则远程主机名都可以省略。例如：`git pull`
+
+例如，我们在远程修改了`README.md`，现在想将该修改合并到本地库，需要执行的命令为：
+
+```bash
+# git pull example
+$ git pull origin master:matser
+From https://github.com/YourName/TestRepo
+   89c1b4b..130c342  master     -> master
+warning: fetch updated the current branch head.
+fast-forwarding your working tree from
+commit 89c1b4bc76530e11ba12205f208d38c204c1956f.
+Already up to date.
+```
+
+> `git pull`命令会将远程获取的最新版本合并到本地仓库。如果不想自动合并，可以使用`git fetch`指令。
+
+
+
 
 
 
@@ -283,7 +322,7 @@ To https://github.com/YourName/TestRepo.git
 * [x] commit
 * [x] branch
 * [x] push 
-* [ ] pull 
+* [x] pull 
 * [ ] checkout 
 * [ ] merge
 * [ ] 一份简单的 git 命令的 cheatsheet
