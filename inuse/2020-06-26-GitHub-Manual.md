@@ -72,11 +72,11 @@
 
 在GitHub Desktop中依次选择菜单 `File\New repository`，也可以使用快捷键 `Ctrl+N`。如下图：
 
-![img01](../images/2020-06-26-GitHub-Manual-01.png)
+![img01](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-01.png)
 
 点击 `New repository` 后，会弹出如下图所示的窗口。
 
-![img02](../images/2020-06-26-GitHub-Manual-02.png)
+![img02](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-02.png)
 
 1. 新创建的仓库的名称；
 2. 对新创建仓库的简要描述。在 GitHub 网页上，该描述会显示在仓库名的下方；
@@ -87,7 +87,7 @@
 
 点击 `Create repository`。如果看到了 `Publish repository` 按钮亮起，如下图所示，说明本地仓库创建成功。
 
-![img03](../images/2020-06-26-GitHub-Manual-03.png)
+![img03](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-03.png)
 
 如果要将刚创建的本地仓库提交到远程，点击 `Publish repository` 即可。
 
@@ -124,11 +124,11 @@ $ ls -a
 
 在 GitHub Desktop 中依次选择菜单 `File\Clone repository`，也可以使用快捷键 `Ctrl+Shift+O`。如下图：
 
-![img04](../images/2020-06-26-GitHub-Manual-04.png)
+![img04](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-04.png)
 
 点击`Clone repository`后，会弹出如下图所示的窗口。
 
-![img05](../images/2020-06-26-GitHub-Manual-05.png)
+![img05](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-05.png)
 
 在 `GitHub.com` 一栏中，可以找到自己账户中的库并克隆到本地。如果是给定 url 的库，需要按上图所示，将仓库的 url 拷贝到文本框 1，在文本框 2 中选择仓库在本地的目录。完成后点击 `Clone` 按钮即可。
 
@@ -171,7 +171,7 @@ $ git clone https://github.com/YourName/TestRepo.git TestRepoRename
 
 在 Git 仓库中修改或添加文件后，左侧的 `Changes` 一栏会显示对应的修改。例如在 `TestRepo` 仓库中添加文件 `file1.txt`，添加后如下图所示：
 
-![img06](../images/2020-06-26-GitHub-Manual-06.png)
+![img06](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-06.png)
 
 在文本框 1（Summary）中添加简要描述，在文本框 2（Description）中添加详细描述。每次提交**必须**要有 Summary，Description 可写可不写。之后点击 `Commit`按钮，完成提交。
 
@@ -222,13 +222,13 @@ Git 的分支允许开发者从开发主线上分离，在不影响主线内容�
 
 在 `Current branch` 栏中点击 `New branch`，输入新 branch 名称即可创建。如下图：
 
-![img07](../images/2020-06-26-GitHub-Manual-07.png)
+![img07](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-07.png)
 
-![img08](../images/2020-06-26-GitHub-Manual-08.png)
+![img08](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-08.png)
 
 创建新分支后，在 `Current branch` 栏中可以看到新创建的分支。如果要删除当前分支，在最上方菜单栏中选择 `Branch\Delete`，或使用快捷键 `Ctrl+Shift+D`，如下图：
 
-![img09](../images/2020-06-26-GitHub-Manual-09.png)
+![img09](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-09.png)
 
 点击后会弹出确认框，点击确定后即可删除当前所在分支。
 
@@ -281,7 +281,7 @@ $ git branch
 
 执行 `commit` 命令提交后，点击 `Push origin` 即可，提交的内容会同步到 `Current branch` 中选择的分支里。
 
-![img10](../images/2020-06-26-GitHub-Manual-10.png)
+![img10](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-10.png)
 
 #### 5.3 Git Bash 使用说明
 
@@ -322,7 +322,7 @@ To https://github.com/YourName/TestRepo.git
 
 远程仓库修改后，红框对应的位置会出现 `Pull origin`，点击该按钮即可将远程仓库的内容同步到 `Current branch` 中选择的分支里。
 
-![img11](../images/2020-06-26-GitHub-Manual-11.png)
+![img11](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-11.png)
 
 #### 6.3 Git Bash 使用说明
 
@@ -357,7 +357,7 @@ Already up to date.
 
 在 `Current branch` 栏中直接选择分支即可。如下图：
 
-![img12](../images/2020-06-26-GitHub-Manual-12.png)
+![img12](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-12.png)
 
 #### 7.3 Git Bash 使用说明
 
@@ -390,7 +390,7 @@ $ git branch
 
 假设即将合并的分支中所有的冲突都已经解决。在 `Current branch` 栏底部点击 `Choose a branch to merge into ...`（`...` 处是当前分支名），会弹出下图所示的窗口：
 
-![img13](../images/2020-06-26-GitHub-Manual-13.png)
+![img13](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/06/26/GitHub-Manual-13.png)
 
 以合并分支 `TestBranch1` 到分支 `master` 为例，在列表中选中 `TestBranch1`，之后点击 `Merge TestBranch1 into Master` 即可。
 
