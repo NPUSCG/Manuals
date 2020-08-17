@@ -6,7 +6,7 @@
 * [x] （全体教研室）[Markdown 使用说明](https://npuscg.github.io/Manuals/2020-05-31-Markdown-Manual.html) *(2020-05-31 Shangkun Shen)*
 * [x] （全体教研室）[FTP 使用说明](https://npuscg.github.io/Manuals/2020-06-17-FTP-Manual.html) *(2020-06-17 Shen'an Li)*
 * [x] （全体教研室）[GitHub 使用说明](https://npuscg.github.io/Manuals/2020-06-26-GitHub-Manual.html) *(2020-06-26 Yujian Lin)*
-* [ ] （全体教研室）[EndNote 使用说明](https://npuscg.github.io/Manuals/2020-06-17-EndNote-Manual.html) *(2020-06-17 Mengna Yang)*
+* [x] （全体教研室）[EndNote 使用说明](https://npuscg.github.io/Manuals/2020-08-17-EndNote-Manual.html) *(2020-08-17 Mengna Yang)*
 
 ## 正在筹备中的公共服务
 
