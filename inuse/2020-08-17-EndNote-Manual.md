@@ -16,13 +16,13 @@
 1. 安装之前请关闭 Microsoft Office 系列软件，卸载 EndNote 的旧版本；
 2. 点击 `File → new → 文件夹命名`，会得到两个文件，一个文件是 `.Data` 格式的，主要用来存放文献全文的，另一个是 `.enl` 格式的，新建后无任何文献记录，界面如下：
 
-![figure1](../images/figure1.png)
+![figure1](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/08/17/EndNote-Manual-1.png)
 
 ## 在线检索 
 
 `Online Search` 栏目下包括常用数据库，点击 `more` 可以选择目标数据库（检索的数据库必须要有访问权限），如果没有 `Web of Science` 等数据库的访问权限，可以选择 `PubMed` 数据库进行检索学习。
 
-![figure2](../images/figure2.png)
+![figure2](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/08/17/EndNote-Manual-2.png)
 
 * 区域 1：离线，在线，混合模式（默认）
 * 区域 2：常见几种数据库
@@ -33,7 +33,7 @@
 
 1. 在区域 4 中用鼠标逐条点击文献记录，区域5中就会显示出该文献的引文格式以及文章摘要，从而可以进行高效文献阅读。
 2. 在区域 4 中右键点击 `Rating` 可以标记重要文献记录；选中要下载的文献条目，右键选择 `Find Full Text` 就可以下载全文，下载的文献会保存在 `My EndNote Library.Data` 文件下的PDF文件夹中。
-3. 文献条目前有 ![figure5](../images/figure5.png) 标识的，表示已经下载了全文；如需查阅全文内容，只需选中该文献条目，点击 `Attached PDFs` 即可查看；如需全屏阅读，点击 ![figure6](../images/figure6.png) 按钮即可；在阅读过程中可以利用工具栏，进行高亮和下划线等，点击保存即可。
+3. 文献条目前有 ![figure5](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/08/17/EndNote-Manual-5.png) 标识的，表示已经下载了全文；如需查阅全文内容，只需选中该文献条目，点击 `Attached PDFs` 即可查看；如需全屏阅读，点击 ![figure6](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/08/17/EndNote-Manual-6.png) 按钮即可；在阅读过程中可以利用工具栏，进行高亮和下划线等，点击保存即可。
 4. 根据研究内容，可以进行适当分组，右键点击 `My Groups` 即可创建分组，分组包括 Great Group（创建组）；Great Smart Group（智能组）；Great Group Set（组集），然后将指定文件直接拖入分组中即可实现精准分组。
 
 ## 导入文献
@@ -58,16 +58,16 @@
 #### 百度学术导入
 
 1. 输入关键词，点击 `批量引用`；
-2. 点击页面右侧 ![figure8](../images/figure8.png) 导出标识，进入批量导出列表，点击 `导出至 EndNote`；
+2. 点击页面右侧 ![figure8](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/08/17/EndNote-Manual-8.png) 导出标识，进入批量导出列表，点击 `导出至 EndNote`；
 3. 双击 `baiduxueshu_papers.enw` 文件即可导入到 `EndNote` 中。
 
-### PDF 导入
+### PDF 文献导入
 
-#### 单个 PDF 文件导入
+#### 单个 PDF 文献导入
 
-点击 `File → Import → File`（快捷键点击 ![figure4](../images/figure4.png)），在弹出的输入文件对话框中，选择要导入的 PDF 文件，`Import Option` 选择 PDF，其他默认。
+点击 `File → Import → File`（快捷键点击 ![figure4](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/08/17/EndNote-Manual-4.png)），在弹出的输入文件对话框中，选择要导入的 PDF 文件，`Import Option` 选择 PDF，其他默认。
 
-#### 多个 PDF 文件批量导入
+#### 多个 PDF 批量导入
 
 点击 `File → Import → Folder`，在弹出的对话框中，`Import Folder` 选择要导入 PDF 所在文件夹, 勾选 `为导入的 PDF 创建组`，其他默认。
 
@@ -75,13 +75,13 @@
 
 ### Word 中插入参考文献
 
-首先在 Word 菜单栏的 `EndNote` 菜单下设置要插入的文献格式，将光标定位在待插入文献所在位置，然后在 EndNote 中将需要插入文档的参考文献选中，点击工具栏图标 ![figure3](../images/figure3.png)，就可将选中的文献条目按照已经设定的文献 格式插入到文档中。
+首先在 Word 菜单栏的 `EndNote` 菜单下设置要插入的文献格式，将光标定位在待插入文献所在位置，然后在 EndNote 中将需要插入文档的参考文献选中，点击工具栏图标 ![figure3](https://raw.githubusercontent.com/NPUSCG/ImageCDN-Storage/master/2020/08/17/EndNote-Manual-3.png)，就可将选中的文献条目按照已经设定的文献 格式插入到文档中。
 
 ### Word 中插入图表
 
 首先将带插入的图表以附件的形式附在参考文献，在 `Caption` 一栏输入图片标题，然后在 Word 中将光标定位在待插入图片所在位置，在菜单下点击最左侧按钮 `Insert Citation` 旁的下拉三角形，选择 `Insert Figure`，在弹出的界面中搜索图片标题并选择要插入条目，点击 `Insert`，即完成插图。
 
-## LaTeX 中嵌入 bib 参考文献的简单步骤
+## LaTeX 中插入 bib 参考文献
 
 LaTeX 中的文献风格有 8 种，分别为：`plain`、`unsrt`、`abbrv`、`alpha`、`ieeetr`、`acm`、`siam`、`apalike`。一般的 `bib` 条目如下方代码所示
 
