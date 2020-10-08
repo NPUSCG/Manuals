@@ -7,3 +7,4 @@
 * [x] （全体教研室）[FTP 使用说明](2020-06-17-FTP-Manual.md)
 * [x] （全体教研室）[GitHub 使用说明](2020-06-26-GitHub-Manual.md)
 * [x] （全体教研室）[EndNote 使用说明](2020-08-17-EndNote-Manual.md)
+* [x] （学校）[班车运行时刻表](2020-10-08-School-Bus-Schedule.md)
